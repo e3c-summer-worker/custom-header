@@ -1,330 +1,309 @@
 <!-- This code is used to create the nav bar on top -->
 <!-- Also the only code that is copy and pasted so far. -->
-
 <script>
     // <!--Replace template desktop navigation menu and mobile sidebar elements with custom elements-->
-    window.onload=function(){
+    window.onload = function () {
         document.getElementById('headerNav').innerHTML = document.getElementById('customMain').innerHTML;
-        document.getElementById('sidecarNav').innerHTML = document.getElementById('customMobile').innerHTML;	
+        document.getElementById('sidecarNav').innerHTML = document.getElementById('customMobile').innerHTML;
     }
 </script>
-    
 <!--Desktop Menu Items-->
 <div id="customMain" style=visibility: hidden>
     <div id="mainNavWrapper" class="nav-wrapper" data-content-field="navigation-mainNav">
-    <nav id="mainNavigation" data-content-field="navigation-mainNav" class="sqs-frontend-overlay-editor-widget-host">
-        <div class="collection">
+        <nav id="mainNavigation" data-content-field="navigation-mainNav"
+            class="sqs-frontend-overlay-editor-widget-host">
+            <div class="collection">
                 <!--UPDATE: page reference-->
                 <a href="/covid19">
-                <!--UPDATE: menu display text-->
-                COVID-19
+                    <!--UPDATE: menu display text--> COVID-19
                 </a>
-            </div>
-        <div class="folder">
-            <!--UPDATE: Folder Display Text-->
-            <div class="folder-toggle" data-href="/meet-the-team-1">About</div>
-            <div class="subnav">
-                <div class="collection">
-                <!--UPDATE: page reference-->
-                <a href="/meet-the-team-1">
-                <!--UPDATE: menu display text-->
-                Meet Our Team
-                </a>
-            </div>
-                <div class="collection">
-                <!--UPDATE: page reference-->
-                <a href="/history">
-                <!--UPDATE: menu display text-->
-                History
-                </a>
-            </div>
-                <div class="collection">
-                <!--UPDATE: page reference-->
-                <a href="/what-we-believe">
-                <!--UPDATE: menu display text-->
-                What We Believe
-                </a>
-            </div>
-            </div>
-            </div>
-        <div class="folder">
-            <!--UPDATE: Folder Display Text-->
-            <div class="folder-toggle" data-href="/englishservice">Join Us</div>
-            <div class="subnav">
-            <div class="collection">
-                <!--UPDATE: page reference-->
-                <a href="/englishservice">
-                <!--UPDATE: menu display text-->
-                Sunday Services
-                </a>
-            </div>
-                <div class="collection">
-                <!--UPDATE: page reference-->
-                <a href="/sunday-school">
-                <!--UPDATE: menu display text-->
-                Sunday School
-                </a>
-            </div>
-            <div class="collection">
-                <!--UPDATE: page reference-->
-                <a href="/english-calendar">
-                <!--UPDATE: menu display text-->
-                Calendar 
-                </a>
-            </div>
-                <div class="collection">
-                <!--UPDATE: page reference-->
-                <a href="/englishupdates">
-                <!--UPDATE: menu display text-->
-                News and Updates
-                </a>
-            </div>
-                <div class="collection">
-                <!--UPDATE: page reference-->
-                <a href="https://drive.google.com/drive/folders/1_cfpL4tmCzmzkm4oDtOhSXOF3uO7pBfK?usp=sharing">E3C Connect</a>
-            </div>
-            </div>
             </div>
             <div class="folder">
-            <!--UPDATE: Folder Display Text-->
-            <div class="folder-toggle" data-href="/english-index">Community</div>
-            <div class="subnav">
-            <div class="collection">
-                <!--UPDATE: page reference-->
-                <a href="/adult-cell-groups">
-                <!--UPDATE: menu display text-->
-                Adult Cell Groups
-                </a>
+                <!--UPDATE: Folder Display Text-->
+                <div class="folder-toggle" data-href="/meet-the-team-1">About</div>
+                <div class="subnav">
+                    <div class="collection">
+                        <!--UPDATE: page reference-->
+                        <a href="/meet-the-team-1">
+                            <!--UPDATE: menu display text--> Meet Our Team
+                        </a>
+                    </div>
+                    <div class="collection">
+                        <!--UPDATE: page reference-->
+                        <a href="/history">
+                            <!--UPDATE: menu display text--> History
+                        </a>
+                    </div>
+                    <div class="collection">
+                        <!--UPDATE: page reference-->
+                        <a href="/what-we-believe">
+                            <!--UPDATE: menu display text--> What We Believe
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="folder">
+                <!--UPDATE: Folder Display Text-->
+                <div class="folder-toggle" data-href="/englishservice">Join Us</div>
+                <div class="subnav">
+                    <div class="collection">
+                        <!--UPDATE: page reference-->
+                        <a href="/englishservice">
+                            <!--UPDATE: menu display text--> Sunday Services
+                        </a>
+                    </div>
+                    <div class="collection">
+                        <!--UPDATE: page reference-->
+                        <a href="/sunday-school">
+                            <!--UPDATE: menu display text--> Sunday School
+                        </a>
+                    </div>
+                    <div class="collection">
+                        <!--UPDATE: page reference-->
+                        <a href="/english-calendar">
+                            <!--UPDATE: menu display text--> Calendar
+                        </a>
+                    </div>
+                    <div class="collection">
+                        <!--UPDATE: page reference-->
+                        <a href="/englishupdates">
+                            <!--UPDATE: menu display text--> News and Updates
+                        </a>
+                    </div>
+                    <div class="collection">
+                        <!--UPDATE: page reference-->
+                        <a href="https://drive.google.com/drive/folders/1_cfpL4tmCzmzkm4oDtOhSXOF3uO7pBfK?usp=sharing">E3C
+                            Connect</a>
+                    </div>
+                </div>
+            </div>
+            <div class="folder">
+                <!--UPDATE: Folder Display Text-->
+                <div class="folder-toggle" data-href="/english-index">Community</div>
+                <div class="subnav">
+                    <div class="collection">
+                        <!--UPDATE: page reference-->
+                        <a href="/adult-cell-groups">
+                            <!--UPDATE: menu display text--> Adult Cell Groups
+                        </a>
+                    </div>
+                    <div class="collection">
+                        <!--UPDATE: page reference-->
+                        <a href="/iwg">
+                            <!--UPDATE: menu display text--> IWG
+                        </a>
+                    </div>
+                    <div class="collection">
+                        <!--UPDATE: page reference-->
+                        <a href="/life-support">
+                            <!--UPDATE: menu display text--> Life Support
+                        </a>
+                    </div>
+                    <div class="collection">
+                        <!--UPDATE: page reference-->
+                        <a href="/petros">
+                            <!--UPDATE: menu display text--> Petros
+                        </a>
+                    </div>
+                    <div class="collection">
+                        <!--UPDATE: page reference-->
+                        <a href="/samuel">
+                            <!--UPDATE: menu display text--> Samuel
+                        </a>
+                    </div>
+                    <div class="collection">
+                        <!--UPDATE: page reference-->
+                        <a href="/eccc-kids">
+                            <!--UPDATE: menu display text--> ECCC Kids
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="folder">
+                <!--UPDATE: Folder Display Text-->
+                <div class="folder-toggle" data-href=>Resources</div>
+                <div class="subnav">
+                    <div class="collection">
+                        <!--UPDATE: page reference-->
+                        <a href="https://drive.google.com/drive/folders/13Yj9ck9_EMYKBtM-F6mx3aa-szyW0ZRS?usp=sharing">
+                            <!--UPDATE: menu display text--> Docs/Forms
+                        </a>
+                    </div>
+                </div>
             </div>
             <div class="collection">
-                <!--UPDATE: page reference-->
-                <a href="/iwg">
-                <!--UPDATE: menu display text-->
-                IWG
-                </a>
-            </div>
-                <div class="collection">
-                <!--UPDATE: page reference-->
-                <a href="/life-support">
-                <!--UPDATE: menu display text-->
-                Life Support
-                </a>
-            </div>
-                <div class="collection">
-                <!--UPDATE: page reference-->
-                <a href="/petros">
-                <!--UPDATE: menu display text-->
-                Petros
-                </a>
-            </div>
-                <div class="collection">
-                <!--UPDATE: page reference-->
-                <a href="/samuel">
-                <!--UPDATE: menu display text-->
-                Samuel
-                </a>
-            </div>
-                <div class="collection">
-                <!--UPDATE: page reference-->
-                <a href="/eccc-kids">
-                <!--UPDATE: menu display text-->
-                ECCC Kids
-                </a>
-            </div>
-            </div>
-            </div>
-        <div class="folder">
-            <!--UPDATE: Folder Display Text-->
-            <div class="folder-toggle" data-href=>Resources</div>
-            <div class="subnav">
-                <div class="collection">
-                <!--UPDATE: page reference-->
-                <a href="https://drive.google.com/drive/folders/13Yj9ck9_EMYKBtM-F6mx3aa-szyW0ZRS?usp=sharing">
-                <!--UPDATE: menu display text-->
-                Docs/Forms
-                </a>            
-                </div>            
-            </div>          
-            </div>
-        <div class="collection">
                 <!--UPDATE: page reference-->
                 <a href="/give-now">
-                <!--UPDATE: menu display text-->
-                Give
+                    <!--UPDATE: menu display text--> Give
                 </a>
             </div>
-        </div>
-    </nav>
     </div>
-
-    <!-- style below blocks out the mobile nav toggle only when nav is loaded -->
-    <style>.mobile-nav-toggle-label { display: inline-block !important; }</style>
+    </nav>
 </div>
+<!-- style below blocks out the mobile nav toggle only when nav is loaded -->
+<style>
+    .mobile-nav-toggle-label {
+        display: inline-block !important;
+    }
 
+</style>
+</div>
 <!--Mobile Menu Items-->
 <div id="customMobile" style=visibility: hidden>
-    <div id="mobileNavWrapper" class="nav-wrapper sqs-frontend-overlay-editor-widget-host" data-content-field="navigation-mobileNav">
-    <nav id="mobileNavigation">
-        <div class="collection">
+    <div id="mobileNavWrapper" class="nav-wrapper sqs-frontend-overlay-editor-widget-host"
+        data-content-field="navigation-mobileNav">
+        <nav id="mobileNavigation">
+            <div class="collection">
                 <!--UPDATE: page reference-->
                 <a href="/covid19">
-                <!--UPDATE: menu display text-->
-                COVID-19
+                    <!--UPDATE: menu display text--> COVID-19
                 </a>
             </div>
             <div class="folder">
-            <!--UPDATE: Folder Display Text-->
-            <div onclick="this.classList.toggle('active')" class="folder-toggle" data-href="/folder">About</div>
-            <div class="subnav">
-                <div class="collection">
-                <!--UPDATE: page reference-->
-                <a href="/meet-the-team-1">
-                <!--UPDATE: menu display text-->
-                Meet Our Team
-                </a>
-            </div>
-                <div class="collection">
-                <!--UPDATE: page reference-->
-                <a href="/history">
-                <!--UPDATE: menu display text-->
-                History
-                </a>
-            </div>
-                <div class="collection">
-                <!--UPDATE: page reference-->
-                <a href="/what-we-believe">
-                <!--UPDATE: menu display text-->
-                What We Believe
-                </a>
-            </div>
-            </div>
-            </div>
-        <div class="folder">
-            <!--UPDATE: Folder Display Text-->
-            <div onclick="this.classList.toggle('active')" class="folder-toggle" data-href="/folder">Join Us</div>
-            <div class="subnav">
-            <div class="collection">
-                <!--UPDATE: page reference-->
-                <a href="/englishservice">
-                <!--UPDATE: menu display text-->
-                Sunday Services
-                </a>
-            </div>
-                <div class="collection">
-                <!--UPDATE: page reference-->
-                <a href="/sunday-school">
-                <!--UPDATE: menu display text-->
-                Sunday School
-                </a>
-            </div>
-            <div class="collection">
-                <!--UPDATE: page reference-->
-                <a href="/english-calendar">
-                <!--UPDATE: menu display text-->
-                Calendar 
-                </a>
-            </div>
-                <div class="collection">
-                <!--UPDATE: page reference-->
-                <a href="/englishupdates">
-                <!--UPDATE: menu display text-->
-                News and Updates
-                </a>
-            </div>
-                <div class="collection">
-                <!--UPDATE: page reference-->
-                <a href="https://drive.google.com/drive/folders/1_cfpL4tmCzmzkm4oDtOhSXOF3uO7pBfK?usp=sharing">E3C Connect</a>
-            </div>
-            </div>
+                <!--UPDATE: Folder Display Text-->
+                <div onclick="this.classList.toggle('active')" class="folder-toggle" data-href="/folder">About</div>
+                <div class="subnav">
+                    <div class="collection">
+                        <!--UPDATE: page reference-->
+                        <a href="/meet-the-team-1">
+                            <!--UPDATE: menu display text--> Meet Our Team
+                        </a>
+                    </div>
+                    <div class="collection">
+                        <!--UPDATE: page reference-->
+                        <a href="/history">
+                            <!--UPDATE: menu display text--> History
+                        </a>
+                    </div>
+                    <div class="collection">
+                        <!--UPDATE: page reference-->
+                        <a href="/what-we-believe">
+                            <!--UPDATE: menu display text--> What We Believe
+                        </a>
+                    </div>
+                </div>
             </div>
             <div class="folder">
-            <!--UPDATE: Folder Display Text-->
-            <div onclick="this.classList.toggle('active')" class="folder-toggle" data-href="/folder">Community</div>
-            <div class="subnav">
-            <div class="collection">
-                <!--UPDATE: page reference-->
-                <a href="/adult-cell-groups">
-                <!--UPDATE: menu display text-->
-                Adult Cell Groups
-                </a>
+                <!--UPDATE: Folder Display Text-->
+                <div onclick="this.classList.toggle('active')" class="folder-toggle" data-href="/folder">Join Us</div>
+                <div class="subnav">
+                    <div class="collection">
+                        <!--UPDATE: page reference-->
+                        <a href="/englishservice">
+                            <!--UPDATE: menu display text--> Sunday Services
+                        </a>
+                    </div>
+                    <div class="collection">
+                        <!--UPDATE: page reference-->
+                        <a href="/sunday-school">
+                            <!--UPDATE: menu display text--> Sunday School
+                        </a>
+                    </div>
+                    <div class="collection">
+                        <!--UPDATE: page reference-->
+                        <a href="/english-calendar">
+                            <!--UPDATE: menu display text--> Calendar
+                        </a>
+                    </div>
+                    <div class="collection">
+                        <!--UPDATE: page reference-->
+                        <a href="/englishupdates">
+                            <!--UPDATE: menu display text--> News and Updates
+                        </a>
+                    </div>
+                    <div class="collection">
+                        <!--UPDATE: page reference-->
+                        <a href="https://drive.google.com/drive/folders/1_cfpL4tmCzmzkm4oDtOhSXOF3uO7pBfK?usp=sharing">E3C
+                            Connect</a>
+                    </div>
+                </div>
             </div>
-            <div class="collection">
-                <!--UPDATE: page reference-->
-                <a href="/iwg">
-                <!--UPDATE: menu display text-->
-                IWG
-                </a>
+            <div class="folder">
+                <!--UPDATE: Folder Display Text-->
+                <div onclick="this.classList.toggle('active')" class="folder-toggle" data-href="/folder">Community</div>
+                <div class="subnav">
+                    <div class="collection">
+                        <!--UPDATE: page reference-->
+                        <a href="/adult-cell-groups">
+                            <!--UPDATE: menu display text--> Adult Cell Groups
+                        </a>
+                    </div>
+                    <div class="collection">
+                        <!--UPDATE: page reference-->
+                        <a href="/iwg">
+                            <!--UPDATE: menu display text--> IWG
+                        </a>
+                    </div>
+                    <div class="collection">
+                        <!--UPDATE: page reference-->
+                        <a href="/life-support">
+                            <!--UPDATE: menu display text--> Life Support
+                        </a>
+                    </div>
+                    <div class="collection">
+                        <!--UPDATE: page reference-->
+                        <a href="/petros">
+                            <!--UPDATE: menu display text--> Petros
+                        </a>
+                    </div>
+                    <div class="collection">
+                        <!--UPDATE: page reference-->
+                        <a href="/samuel">
+                            <!--UPDATE: menu display text--> Samuel
+                        </a>
+                    </div>
+                    <div class="collection">
+                        <!--UPDATE: page reference-->
+                        <a href="/eccc-kids">
+                            <!--UPDATE: menu display text--> ECCC Kids
+                        </a>
+                    </div>
+                </div>
             </div>
-                <div class="collection">
-                <!--UPDATE: page reference-->
-                <a href="/life-support">
-                <!--UPDATE: menu display text-->
-                Life Support
-                </a>
-            </div>
-                <div class="collection">
-                <!--UPDATE: page reference-->
-                <a href="/petros">
-                <!--UPDATE: menu display text-->
-                Petros
-                </a>
-            </div>
-                <div class="collection">
-                <!--UPDATE: page reference-->
-                <a href="/samuel">
-                <!--UPDATE: menu display text-->
-                Samuel
-                </a>
-            </div>
-                <div class="collection">
-                <!--UPDATE: page reference-->
-                <a href="/eccc-kids">
-                <!--UPDATE: menu display text-->
-                ECCC Kids
-                </a>
-            </div>
-            </div>
-            </div>
-        <div class="folder">
-            <!--UPDATE: Folder Display Text-->
+            <div class="folder">
+                <!--UPDATE: Folder Display Text-->
                 <div onclick="this.classList.toggle('active')" class="folder-toggle" data-href="/folder">Resources</div>
-            <div class="subnav">
-                <div class="collection">
-                <!--UPDATE: page reference-->
-                <a href="https://drive.google.com/drive/folders/13Yj9ck9_EMYKBtM-F6mx3aa-szyW0ZRS?usp=sharing">
-                <!--UPDATE: menu display text-->
-                Docs/Forms
-                </a>            
-                </div>            
-            </div>          
+                <div class="subnav">
+                    <div class="collection">
+                        <!--UPDATE: page reference-->
+                        <a href="https://drive.google.com/drive/folders/13Yj9ck9_EMYKBtM-F6mx3aa-szyW0ZRS?usp=sharing">
+                            <!--UPDATE: menu display text--> Docs/Forms
+                        </a>
+                    </div>
+                </div>
             </div>
-        <div class="collection">
+            <div class="collection">
                 <!--UPDATE: page reference-->
                 <a href="/give-now">
-                <!--UPDATE: menu display text-->
-                Give
+                    <!--UPDATE: menu display text--> Give
                 </a>
             </div>
-    </nav>
+        </nav>
     </div>
 </div>
-
 <!--Adding albra bold-->
 <style>
-@font-face {    
-font-family: 'Albra Bold';       
-src: url('https://static1.squarespace.com/static/5aa9a74ca2772cf40cb0e86b/t/5ff8d81b78ad8522d3d4b05f/1610143771752/Albra+Bold.otf');  }
-</style>
+    @font-face {
+        font-family: 'Albra Bold';
+        src: url('https://static1.squarespace.com/static/5aa9a74ca2772cf40cb0e86b/t/5ff8d81b78ad8522d3d4b05f/1610143771752/Albra+Bold.otf');
+    }
 
+</style>
 <!--Assigning albra bold-->
 <style>
-h1, h2 {font-family: 'Albra Bold';}
-</style>
+    h1,
+    h2 {
+        font-family: 'Albra Bold';
+    }
 
+</style>
 <!--Banner Size-->
 <style>
-view-list .banner-thumbnail-wrapper, .collection-type-page .banner-thumbnail-wrapper, .collection-type-index .banner-thumbnail-wrapper {
-    min-height: 200px;
-    padding: 130px 0px;
-}
+    view-list .banner-thumbnail-wrapper,
+    .collection-type-page .banner-thumbnail-wrapper,
+    .collection-type-index .banner-thumbnail-wrapper {
+        min-height: 200px;
+        padding: 130px 0px;
+    }
+
 </style>
