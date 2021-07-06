@@ -1,8 +1,22 @@
-<!-- ECCC Kids Custom Header -->
+<!-- 1.0.1 is the Navbar Stable release (hotfix) -->
 <script
-    src="https://cdn.jsdelivr.net/gh/SummerWorkerECCC/SummerWorkerECCC.github.io@kids-1.1.5-rc5/scripts/kidsnav-elm.js"></script>
+    src="https://cdn.jsdelivr.net/gh/SummerWorkerECCC/SummerWorkerECCC.github.io@1.0.1/scripts/mobilenav-elm.js"></script>
+<script
+    src="https://cdn.jsdelivr.net/gh/SummerWorkerECCC/SummerWorkerECCC.github.io@1.0.1/scripts/desktopnav-elm.js"></script>
+<!-- ECCC Kids import -->
+<script
+    src="https://cdn.jsdelivr.net/gh/SummerWorkerECCC/SummerWorkerECCC.github.io@1.1.5-rc5/scripts/kidsnav-elm.js"></script>
 <script>
     window.onload = function () {
+        // desktop navigation
+        const headerNav = document.getElementById('headerNav');
+        const app_d = Elm.DesktopNav.init({ node: headerNav });
+
+        // mobile navigation
+        const sidecarNav = document.getElementById('sidecarNav');
+        const app_m = Elm.MobileNav.init({ node: sidecarNav });
+
+        // kids navigation
         const kidsNav = document.getElementById('eccc-kids-navigation');
         Elm.KidsNav.init({
             node: kidsNav,
@@ -15,3 +29,34 @@
         });
     }
 </script>
+<!-- Adding Scrolling Terrain stuff 
+    Note that this will automatically run and replace the header with the terrain stuff
+-->
+<script
+    src="https://cdn.jsdelivr.net/gh/SummerWorkerECCC/SummerWorkerECCC.github.io@terrain-1.0.0/scripts/scrolling-terrain.min.js"></script>
+<!--Adding albra bold-->
+<style>
+    @font-face {
+        font-family: 'Albra Bold';
+        src: url('https://static1.squarespace.com/static/5aa9a74ca2772cf40cb0e86b/t/5ff8d81b78ad8522d3d4b05f/1610143771752/Albra+Bold.otf');
+    }
+
+</style>
+<!--Assigning albra bold-->
+<style>
+    h1,
+    h2 {
+        font-family: 'Albra Bold';
+    }
+
+</style>
+<!--Banner Size-->
+<style>
+    view-list .banner-thumbnail-wrapper,
+    .collection-type-page .banner-thumbnail-wrapper,
+    .collection-type-index .banner-thumbnail-wrapper {
+        min-height: 200px;
+        padding: 130px 0px;
+    }
+
+</style>
