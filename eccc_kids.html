@@ -3,9 +3,12 @@
     src="https://cdn.jsdelivr.net/gh/SummerWorkerECCC/SummerWorkerECCC.github.io@1.0.1/scripts/mobilenav-elm.js"></script>
 <script
     src="https://cdn.jsdelivr.net/gh/SummerWorkerECCC/SummerWorkerECCC.github.io@1.0.1/scripts/desktopnav-elm.js"></script>
-<!-- ECCC Kids import -->
+<!-- Scrolling Terrain imports (p5.js and our code)-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.0/p5.min.js"
+    integrity="sha512-tGZFF1kxT/c9C+kv77mKkZ9Ww1VyU8TMX6HLUSzbPrDLuptbiRFBfti8A33ip+BBIHYUsybuZD9OKLmIqdLmaQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script
-    src="https://cdn.jsdelivr.net/gh/SummerWorkerECCC/SummerWorkerECCC.github.io@1.1.5-rc5/scripts/kidsnav-elm.js"></script>
+    src="https://cdn.jsdelivr.net/gh/SummerWorkerECCC/SummerWorkerECCC.github.io@terrain-2.0.0/scripts/scrolling-terrain.min.js"></script>
 <script>
     window.onload = function () {
         // desktop navigation
@@ -16,24 +19,12 @@
         const sidecarNav = document.getElementById('sidecarNav');
         const app_m = Elm.MobileNav.init({ node: sidecarNav });
 
-        // kids navigation
-        const kidsNav = document.getElementById('eccc-kids-navigation');
-        Elm.KidsNav.init({
-            node: kidsNav,
-            flags: {
-                width: window.innerWidth,
-                // Set currentPage to the actual current page!
-                // this is based on the link labels
-                currentPage: "HOME"
-            }
-        });
+        // p5.js stuff
+        const containerElement = document.getElementById('thumbnail');
+        containerElement.replaceChildren()
+        new p5(TerrainSketch.sketch(containerElement), containerElement);
     }
 </script>
-<!-- Adding Scrolling Terrain stuff 
-    Note that this will automatically run and replace the header with the terrain stuff
--->
-<script
-    src="https://cdn.jsdelivr.net/gh/SummerWorkerECCC/SummerWorkerECCC.github.io@terrain-1.0.0/scripts/scrolling-terrain.min.js"></script>
 <!--Adding albra bold-->
 <style>
     @font-face {
