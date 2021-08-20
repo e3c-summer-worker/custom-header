@@ -1,9 +1,15 @@
-<!-- Used in each of the NextGen pages
-    https://github.com/e3c-summer-worker/custom-header/blob/main/nextgen/nextgen.html
+<!-- Used in each of the Kids pages
+    https://github.com/e3c-summer-worker/custom-header/blob/main/nextgen/kids.html
 -->
-<!-- Navigation-->
+<!-- Navigation -->
 <script src="https://cdn.jsdelivr.net/gh/e3c-summer-worker/components@navigation/mobilenav-elm.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/e3c-summer-worker/components@navigation/desktopnav-elm.js"></script>
+<!-- Scrolling Terrain imports (p5.js and our code)-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.0/p5.min.js"
+    integrity="sha512-tGZFF1kxT/c9C+kv77mKkZ9Ww1VyU8TMX6HLUSzbPrDLuptbiRFBfti8A33ip+BBIHYUsybuZD9OKLmIqdLmaQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script
+    src="https://cdn.jsdelivr.net/gh/e3c-summer-worker/components@2121060d7e7cf3b7bfd6a7ae2dd1bc29994f0c9a/scrolling-terrain.min.js"></script>
 <script>
     window.onload = function () {
         // desktop navigation
@@ -13,6 +19,11 @@
         // mobile navigation
         const sidecarNav = document.getElementById('sidecarNav');
         const app_m = Elm.MobileNav.init({ node: sidecarNav });
+
+        // p5.js stuff
+        const containerElement = document.getElementById('thumbnail');
+        containerElement.replaceChildren()
+        new p5(TerrainSketch.sketch(containerElement), containerElement);
     }
 </script>
 <!--Adding albra bold-->
