@@ -2,14 +2,13 @@
     https://github.com/e3c-summer-worker/custom-header/blob/main/nextgen/kids.html
 -->
 <!-- Navigation -->
-<script src="https://cdn.jsdelivr.net/gh/e3c-summer-worker/components@navigation/mobilenav-elm.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/e3c-summer-worker/components@navigation/desktopnav-elm.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@e3c-summer-worker/navigation@1.0.4/build/desktopnav-elm.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@e3c-summer-worker/navigation@1.0.4/build/mobilenav-elm.js"></script>
 <!-- Scrolling Terrain imports (p5.js and our code)-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.0/p5.min.js"
     integrity="sha512-tGZFF1kxT/c9C+kv77mKkZ9Ww1VyU8TMX6HLUSzbPrDLuptbiRFBfti8A33ip+BBIHYUsybuZD9OKLmIqdLmaQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script
-    src="https://cdn.jsdelivr.net/gh/e3c-summer-worker/components@2121060d7e7cf3b7bfd6a7ae2dd1bc29994f0c9a/scrolling-terrain.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/scrolling-terrain-bg@1.2.0/build/scrolling-terrain.min.js"></script>
 <script>
     window.onload = function () {
         // desktop navigation
@@ -22,28 +21,40 @@
 
         // p5.js stuff
         const containerElement = document.getElementById('thumbnail');
-        containerElement.replaceChildren()
         new p5(TerrainSketch.sketch(containerElement), containerElement);
     }
 </script>
 <!--Adding albra bold-->
-<style>
-    @font-face {
-        font-family: 'Albra Bold';
-        src: url('https://static1.squarespace.com/static/5aa9a74ca2772cf40cb0e86b/t/5ff8d81b78ad8522d3d4b05f/1610143771752/Albra+Bold.otf');
-    }
-
-</style>
-<!--Assigning albra bold-->
 <style>
     h1,
     h2 {
         font-family: 'Albra Bold';
     }
 
-</style>
-<!--Banner Size-->
-<style>
+    @font-face {
+        font-family: 'Albra Bold';
+        src: url('https://static1.squarespace.com/static/5aa9a74ca2772cf40cb0e86b/t/5ff8d81b78ad8522d3d4b05f/1610143771752/Albra+Bold.otf');
+    }
+
+    /* Styling for the canvas */
+    #defaultCanvas0 {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .scrolling-terrain-btn {
+        z-index: 100;
+        cursor: pointer;
+        background-color: #ffffff;
+        border-radius: 25%;
+    }
+
+    .scrolling-terrain-btn:hover {
+        background-color: #ddd;
+    }
+
+    /* banner size */
     view-list .banner-thumbnail-wrapper,
     .collection-type-page .banner-thumbnail-wrapper,
     .collection-type-index .banner-thumbnail-wrapper {
