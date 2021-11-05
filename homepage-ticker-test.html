@@ -15,35 +15,23 @@
 
 </style>
 <link rel="stylesheet" type="text/css"
-    href="https://cdn.jsdelivr.net/npm/@e3c-summer-worker/homepage-ticker@1.1.1/build/ticker.css">
+    href="https://cdn.jsdelivr.net/npm/@e3c-summer-worker/homepage-ticker@latest/build/ticker.css">
 <script
-    src="https://cdn.jsdelivr.net/npm/@e3c-summer-worker/homepage-ticker@1.1.1/build/homepage-ticker-elm.js"></script>
+    src="https://cdn.jsdelivr.net/npm/@e3c-summer-worker/homepage-ticker@latest/build/homepage-ticker-elm.js"></script>
 <script>
-    // observe the creation of an element
-    // https://stackoverflow.com/a/65585776
-    // often window.onload is not enough, as we have to wait longer for Squarespace to load the elements
-    const elemSelector = '.sqs-slice-group.group-copy.align-center-vert.full-width';
+    window.addEventListener('load', () => {
+        console.log('query selector:', document.querySelector('.sqs-slide-layer.layer-front.full-width-height > .sqs-slide-layer-content'));
 
-    // what to run when the element is created
-    const callback = (elem) => {
-        console.log('Element.is created!', elem)
+        // somehow using `document.querySelector('.sqs-slice-group.group-copy.align-center-vert.full-width')` doesn't work
+        const parent = document.querySelector('.sqs-slide-layer.layer-front.full-width-height > .sqs-slide-layer-content');
+        const child = parent.children[1];
+
         const elm = document.createElement('div');
         elm.setAttribute('id', 'elm');
 
         // insert after wrapper
         // https://stackoverflow.com/a/4793630
-        elem.parentNode.insertBefore(elm, elem);
+        parent.insertBefore(elm, child);
         Elm.HomepageTicker.init({ node: elm });
-    }
-
-    const observer = new MutationObserver(mutations => [...mutations]
-        .flatMap((mutation) => [...mutation.addedNodes])
-        .filter((node) => node.matches && node.matches(elemSelector))
-        .forEach(callback))
-
-
-    window.onload = () => {
-        console.log('Window onloaded! Observer is now observing...')
-        observer.observe(document.body, { childList: true, subtree: true });
-    }
+    })
 </script>
