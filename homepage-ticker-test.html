@@ -15,23 +15,22 @@
 
 </style>
 <link rel="stylesheet" type="text/css"
-    href="https://cdn.jsdelivr.net/npm/@e3c-summer-worker/homepage-ticker@latest/build/ticker.css">
-<script
-    src="https://cdn.jsdelivr.net/npm/@e3c-summer-worker/homepage-ticker@latest/build/homepage-ticker-elm.js"></script>
+    href="https://cdn.jsdelivr.net/npm/@e3c-summer-worker/homepage-ticker@2/build/ticker.css">
+<script src="https://cdn.jsdelivr.net/npm/@e3c-summer-worker/homepage-ticker@2/build/ticker.js"></script>
 <script>
-    window.addEventListener('load', () => {
-        console.log('query selector:', document.querySelector('.sqs-slide-layer.layer-front.full-width-height > .sqs-slide-layer-content'));
+    window.onload = () => {
 
-        // somehow using `document.querySelector('.sqs-slice-group.group-copy.align-center-vert.full-width')` doesn't work
-        const parent = document.querySelector('.sqs-slide-layer.layer-front.full-width-height > .sqs-slide-layer-content');
-        const child = parent.children[1];
-
-        const elm = document.createElement('div');
-        elm.setAttribute('id', 'elm');
-
-        // insert after wrapper
-        // https://stackoverflow.com/a/4793630
-        parent.insertBefore(elm, child);
-        Elm.HomepageTicker.init({ node: elm });
-    })
+        const startTime = new Date();
+        const elementExists = setInterval(() => {
+            var elm = document.querySelector('.sqs-slice-group.group-copy.align-center-vert.full-width');
+            if (elm != null) {
+                const diff = new Date() - startTime;
+                console.log('Element exists!', elm, '. Took:', diff, 'ms')
+                clearInterval(elementExists);
+            } else {
+                const diff = new Date() - startTime;
+                console.log('Element does not exist!', diff)
+            }
+        }, 100);
+    }
 </script>
