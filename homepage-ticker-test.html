@@ -17,20 +17,3 @@
 <link rel="stylesheet" type="text/css"
     href="https://cdn.jsdelivr.net/npm/@e3c-summer-worker/homepage-ticker@2/build/ticker.css">
 <script src="https://cdn.jsdelivr.net/npm/@e3c-summer-worker/homepage-ticker@2/build/ticker.js"></script>
-<script>
-    window.onload = () => {
-
-        const startTime = new Date();
-        const elementExists = setInterval(() => {
-            var elm = document.querySelector('.sqs-slice-group.group-copy.align-center-vert.full-width');
-            if (elm != null) {
-                const diff = new Date() - startTime;
-                console.log('Element exists!', elm, '. Took:', diff, 'ms')
-                clearInterval(elementExists);
-            } else {
-                const diff = new Date() - startTime;
-                console.log('Element does not exist!', diff)
-            }
-        }, 100);
-    }
-</script>
