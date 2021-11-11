@@ -1,17 +1,6 @@
 <!-- CUSTOM STUFF -->
-<script src="https://cdn.jsdelivr.net/npm/@e3c-summer-worker/navigation@latest/build/mobilenav-elm.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@e3c-summer-worker/navigation@latest/build/desktopnav-elm.js"></script>
-<script>
-    window.onload = function () {
-        // desktop navigation
-        const headerNav = document.getElementById('headerNav');
-        const app_d = Elm.DesktopNav.init({ node: headerNav });
-
-        // mobile navigation
-        const sidecarNav = document.getElementById('sidecarNav');
-        const app_m = Elm.MobileNav.init({ node: sidecarNav });
-    }
-</script>
+<!-- Navigation -->
+<script src="https://cdn.jsdelivr.net/npm/@e3c-summer-worker/navigation@2/build/navigation.js"></script>
 <!--Adding albra bold-->
 <style>
     @font-face {
@@ -35,6 +24,12 @@
     .collection-type-index .banner-thumbnail-wrapper {
         min-height: 200px;
         padding: 130px 0px;
+    }
+
+    .desc-wrapper p:nth-child(6)>a {
+        /** border:2px solid #fff !important; */
+        color: #fff !important;
+        font-size: 28px;
     }
 
 </style>
