@@ -1,38 +1,23 @@
-<!-- Used in each of the Petros pages
-    https://github.com/e3c-summer-worker/custom-header/blob/main/nextgen/petros.html
+<!-- Used in each of the Samuel pages
+    https://github.com/e3c-summer-worker/custom-header/blob/main/nextgen/samuel.html
 -->
 <!-- Navigation -->
-<script src="https://cdn.jsdelivr.net/npm/@e3c-summer-worker/navigation@latest/build/desktopnav-elm.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@e3c-summer-worker/navigation@latest/build/mobilenav-elm.js"></script>
-<script>
-    window.onload = function () {
-        // desktop navigation
-        const headerNav = document.getElementById('headerNav');
-        const app_d = Elm.DesktopNav.init({ node: headerNav });
-
-        // mobile navigation
-        const sidecarNav = document.getElementById('sidecarNav');
-        const app_m = Elm.MobileNav.init({ node: sidecarNav });
-    }
-</script>
+<script src="https://cdn.jsdelivr.net/npm/@e3c-summer-worker/navigation@2/build/navigation.js"></script>
 <!--Adding albra bold-->
 <style>
+    /* Adding albra bold */
     @font-face {
         font-family: 'Albra Bold';
         src: url('https://static1.squarespace.com/static/5aa9a74ca2772cf40cb0e86b/t/5ff8d81b78ad8522d3d4b05f/1610143771752/Albra+Bold.otf');
     }
 
-</style>
-<!--Assigning albra bold-->
-<style>
+    /* Assigning albra bold */
     h1,
     h2 {
         font-family: 'Albra Bold';
     }
 
-</style>
-<!--Banner Size-->
-<style>
+    /* banner size */
     view-list .banner-thumbnail-wrapper,
     .collection-type-page .banner-thumbnail-wrapper,
     .collection-type-index .banner-thumbnail-wrapper {
